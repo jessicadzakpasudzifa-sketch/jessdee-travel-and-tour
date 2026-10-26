@@ -1,10 +1,10 @@
-# Passage Tours
+# Jessdee Travel and Tour
 
-A static travel booking website for Passage Tours, planned from Accra. Visitors can explore countries, compare tour packages, and send a booking or contact inquiry.
+A static travel booking website for Jessdee Travel and Tour, planned from Accra. Visitors can explore destinations, compare tour packages, and send a booking or contact inquiry.
 
 **Studio:** 12 Independence Avenue, Accra, Ghana  
 **Phone:** +233 30 123 4567  
-**Email:** hello@passagetours.com (placeholder — change before launch)  
+**Email:** hello@jessdeetravel.com (placeholder — change before launch)  
 **WhatsApp:** https://wa.me/233301234567
 
 ## Pages

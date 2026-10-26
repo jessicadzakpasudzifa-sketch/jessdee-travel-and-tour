@@ -6,7 +6,7 @@ const COUNTRIES = [
     summary: "Coastal forts, a rainforest canopy walk, and Accra after dark.",
     price: 890,
     days: 7,
-    types: ["Culture"],
+    types: ["Culture", "Family"],
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Castle%2C_Cape_Coast_%28P1100222%29.jpg/1280px-Castle%2C_Cape_Coast_%28P1100222%29.jpg",
     alt: "Cape Coast Castle on the Gulf of Guinea in Ghana"
   },
@@ -61,7 +61,7 @@ const COUNTRIES = [
     summary: "Pyramids, the Nile, and Cairo's oldest streets.",
     price: 1280,
     days: 8,
-    types: ["Culture"],
+    types: ["Culture", "Family"],
     image: "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=1400&q=70",
     alt: "The Pyramids of Giza in warm evening light"
   },
@@ -72,7 +72,7 @@ const COUNTRIES = [
     summary: "Whitewashed islands, slow ferries, and long lunches.",
     price: 2150,
     days: 8,
-    types: ["Relaxation"],
+    types: ["Relaxation", "Family"],
     image: "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?auto=format&fit=crop&w=1400&q=70",
     alt: "Blue domes and white buildings above the Santorini caldera"
   },
@@ -121,6 +121,50 @@ const COUNTRIES = [
     alt: "Longtail boats in clear water beside limestone cliffs in Thailand"
   },
   {
+    id: "india",
+    name: "India",
+    region: "Asia",
+    summary: "The Taj Mahal at first light, then the lanes of Agra and Delhi.",
+    price: 1590,
+    days: 7,
+    types: ["Culture", "Family"],
+    image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1400&q=70",
+    alt: "The Taj Mahal reflected in still water"
+  },
+  {
+    id: "turkey",
+    name: "Turkey",
+    region: "Europe",
+    summary: "Istanbul's mosques, the Bosphorus, and a slower day in the bazaar.",
+    price: 1740,
+    days: 7,
+    types: ["Culture"],
+    image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=1400&q=70",
+    alt: "The Blue Mosque and Istanbul skyline at dusk"
+  },
+  {
+    id: "france",
+    name: "France",
+    region: "Europe",
+    summary: "Paris bridges, museum mornings, and a day outside the city.",
+    price: 2280,
+    days: 7,
+    types: ["Culture", "Culinary"],
+    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1400&q=70",
+    alt: "The Eiffel Tower above the Paris rooftops"
+  },
+  {
+    id: "canada",
+    name: "Canada",
+    region: "North America",
+    summary: "Rockies viewpoints, a lakeside lodge, and room to breathe.",
+    price: 2620,
+    days: 8,
+    types: ["Adventure"],
+    image: "https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&w=1400&q=70",
+    alt: "Snow-dusted peaks and a lake in the Canadian Rockies"
+  },
+  {
     id: "peru",
     name: "Peru",
     region: "South America",
@@ -139,7 +183,7 @@ const PACKAGES = [
     countryId: "ghana",
     name: "Ghana Heritage & Coast",
     nights: "6 nights",
-    overview: "A first passage through Ghana: Accra's kitchens and galleries, the castles at Cape Coast and Elmina, and the Kakum canopy walk.",
+    overview: "A first journey through Ghana: Accra's kitchens and galleries, the castles at Cape Coast and Elmina, and the Kakum canopy walk.",
     itinerary: [
       { title: "Days 1–2 · Accra", text: "Airport welcome, a Jamestown walk, and an evening of grilled tilapia. Day two is for the Arts Centre, a gallery stop, and a cooking afternoon." },
       { title: "Days 3–5 · Cape Coast", text: "Guided time at Cape Coast and Elmina castles, a canoe landing with local fishermen, and the Kakum canopy walkway." },
@@ -220,7 +264,7 @@ const PACKAGES = [
   {
     id: "greek-islands",
     countryId: "greece",
-    name: "Greek Island Passage",
+    name: "Greek Island Holiday",
     nights: "7 nights",
     overview: "Athens for a day, then ferries to Naxos and Santorini. Designed for couples and friends who would rather swim than sprint.",
     itinerary: [
@@ -299,6 +343,62 @@ const PACKAGES = [
     ],
     includes: ["Hotels", "Train and entry tickets", "Guides and tasting", "Breakfast", "Internal flights"],
     excludes: ["International flights", "Huayna Picchu permit if added later", "Travel insurance"]
+  },
+  {
+    id: "taj-agra",
+    countryId: "india",
+    name: "Taj & Agra",
+    nights: "6 nights",
+    overview: "Delhi for the arrival, then Agra for the Taj Mahal at opening hour and a riverside evening.",
+    itinerary: [
+      { title: "Days 1–2 · Delhi", text: "Airport welcome, a guided old-city walk, and a free afternoon to settle." },
+      { title: "Days 3–5 · Agra", text: "Sunrise at the Taj Mahal, Agra Fort, and a slower day for markets or a family rest." },
+      { title: "Days 6–7 · Departure", text: "Return to Delhi and help with the flight home." }
+    ],
+    includes: ["Hotels", "Private driver", "Taj and fort entries", "Breakfast", "Airport transfers"],
+    excludes: ["International flights", "Most meals", "Travel insurance"]
+  },
+  {
+    id: "istanbul-week",
+    countryId: "turkey",
+    name: "Istanbul Week",
+    nights: "6 nights",
+    overview: "A first week in Istanbul: the historic peninsula, a Bosphorus cruise, and time to wander the Grand Bazaar.",
+    itinerary: [
+      { title: "Days 1–3 · Sultanahmet", text: "Hagia Sophia, the Blue Mosque, and a cistern visit with a local host." },
+      { title: "Days 4–5 · The water", text: "A Bosphorus cruise and a neighborhood afternoon in Karakoy or Kadikoy." },
+      { title: "Days 6–7 · Departure", text: "A free morning and transfer to the airport." }
+    ],
+    includes: ["Boutique hotel", "Listed entries and cruise", "Breakfast", "Airport transfers"],
+    excludes: ["International flights", "Most meals", "Travel insurance"]
+  },
+  {
+    id: "paris-light",
+    countryId: "france",
+    name: "Paris, Lightly",
+    nights: "6 nights",
+    overview: "A gentle Paris week: one museum, the river, and evenings left open for whatever the city suggests.",
+    itinerary: [
+      { title: "Days 1–3 · The river", text: "Left-bank hotel, a Seine walk, and a skip-the-line hour at the Louvre or Musee d'Orsay." },
+      { title: "Days 4–5 · Neighborhoods", text: "A market morning and a day trip to Versailles if the group wants it." },
+      { title: "Days 6–7 · Departure", text: "A last cafe morning and transfer help." }
+    ],
+    includes: ["Central hotel", "Museum entry", "Breakfast", "Airport transfer"],
+    excludes: ["International flights", "Most meals", "Versailles tickets unless added", "Travel insurance"]
+  },
+  {
+    id: "rockies-lakes",
+    countryId: "canada",
+    name: "Rockies Lakes",
+    nights: "7 nights",
+    overview: "Banff and Lake Louise at an easy pace, with a private driver for the scenic stops.",
+    itinerary: [
+      { title: "Days 1–3 · Banff", text: "Town hotel, a gondola or hot springs afternoon, and a quiet start after the flight." },
+      { title: "Days 4–6 · The lakes", text: "Lake Louise and Moraine when the road is open, with time for a short walk rather than a summit." },
+      { title: "Days 7–8 · Departure", text: "Return toward Calgary and the flight home." }
+    ],
+    includes: ["Lodge and hotel", "Private driver", "Park pass", "Breakfast"],
+    excludes: ["International flights", "Most meals", "Travel insurance"]
   }
 ];
 
@@ -496,7 +596,11 @@ function renderPackages() {
   const form = document.querySelector("#package-filters");
   const count = document.querySelector("#result-count");
   const params = new URLSearchParams(window.location.search);
-  if (form && params.get("country")) form.elements.country.value = params.get("country");
+  if (form) {
+    ["country", "region", "budget", "type", "duration"].forEach((name) => {
+      if (params.get(name) && form.elements[name]) form.elements[name].value = params.get(name);
+    });
+  }
 
   const openPackage = (id) => {
     const trip = packageById(id);
@@ -648,7 +752,7 @@ function bindInquiry(form, storageKey) {
     if (!valid) return;
 
     const payload = Object.fromEntries(new FormData(form).entries());
-    const reference = `PT-${Math.floor(1000 + Math.random() * 9000)}`;
+    const reference = `JD-${Math.floor(1000 + Math.random() * 9000)}`;
     const saved = JSON.parse(localStorage.getItem(storageKey) || "[]");
     saved.push({ ...payload, reference, savedAt: new Date().toISOString() });
     localStorage.setItem(storageKey, JSON.stringify(saved));
@@ -677,7 +781,7 @@ function initBooking() {
   const params = new URLSearchParams(window.location.search);
   if (params.get("package")) packageField.value = params.get("package");
   if (params.get("intent") && form.elements.intent) form.elements.intent.value = params.get("intent");
-  bindInquiry(form, "passagetours.inquiries");
+  bindInquiry(form, "jessdee.inquiries");
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -687,5 +791,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderCountries();
   renderPackages();
   initBooking();
-  bindInquiry(document.querySelector("#contact-form"), "passagetours.messages");
+  bindInquiry(document.querySelector("#contact-form"), "jessdee.messages");
 });
