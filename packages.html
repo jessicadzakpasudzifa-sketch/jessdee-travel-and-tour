@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tour Packages | Passage Tours</title>
+  <meta name="description" content="Compare Passage Tours packages with itineraries, inclusions, photos, and prices. Book now or request a quote for a custom holiday.">
+  <meta name="theme-color" content="#0b2340">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,520;0,9..144,600;1,9..144,520&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="packages">
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="topbar">
+    <div class="wrap topbar-inner">
+      <span class="topbar-place">12 Independence Avenue, Accra, Ghana</span>
+      <span class="topbar-links">
+        <a href="tel:+233301234567">+233 30 123 4567</a>
+        <a href="https://wa.me/233301234567" target="_blank" rel="noopener">WhatsApp</a>
+      </span>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html" aria-label="Passage Tours home">
+        <svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8 23c4-8 7-8 10-3s6 5 10-8" fill="none" stroke="#a67c3d" stroke-width="1.6" stroke-linecap="round"/><circle cx="25" cy="12" r="1.8" fill="#a67c3d"/></svg>
+        <span><strong>Passage</strong><small>Tours</small></span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="countries.html" data-nav="countries">Countries</a>
+        <a href="packages.html" data-nav="packages">Packages</a>
+        <a href="about.html" data-nav="about">About</a>
+        <a href="testimonials.html" data-nav="stories">Stories</a>
+        <a href="faq.html" data-nav="faq">FAQ</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+        <a class="nav-book" href="booking.html" data-nav="booking">Book a tour</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-gold btn-small header-book" href="booking.html">Book a tour</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Menu</span><span class="bars"></span></button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero hero-packages">
+      <div class="wrap">
+        <p class="eyebrow">Tour packages</p>
+        <h1>Itineraries with the price in view</h1>
+        <p class="lede">Each package lists the days, what is included, and a starting price per person. Book it as written, or request a quote.</p>
+      </div>
+    </section>
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <form id="package-filters" class="panel filters">
+          <label class="field"><span>Destination</span><select name="country" data-destinations data-param="country"></select></label>
+          <label class="field"><span>Region</span>
+            <select name="region">
+              <option value="">All regions</option>
+              <option>West Africa</option>
+              <option>East Africa</option>
+              <option>North Africa</option>
+              <option>Southern Africa</option>
+              <option>Europe</option>
+              <option>Asia</option>
+              <option>South America</option>
+            </select>
+          </label>
+          <label class="field"><span>Budget</span>
+            <select name="budget">
+              <option value="">Any budget</option>
+              <option value="under">Under $1,500</option>
+              <option value="mid">$1,500 – $2,500</option>
+              <option value="premium">Over $2,500</option>
+            </select>
+          </label>
+          <label class="field"><span>Trip type</span>
+            <select name="type">
+              <option value="">All types</option>
+              <option>Adventure</option>
+              <option>Culture</option>
+              <option>Culinary</option>
+              <option>Relaxation</option>
+              <option>Safari</option>
+            </select>
+          </label>
+          <label class="field"><span>Duration</span>
+            <select name="duration">
+              <option value="">Any length</option>
+              <option value="week">Up to 7 days</option>
+              <option value="mid">8–9 days</option>
+              <option value="long">10 days or more</option>
+            </select>
+          </label>
+        </form>
+        <div class="results-bar">
+          <p id="result-count">12 packages</p>
+          <button class="linkish" type="reset" form="package-filters">Clear filters</button>
+        </div>
+        <div id="package-grid" class="package-list" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+  <dialog id="package-dialog" aria-labelledby="dialog-title"></dialog>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <a class="logo" href="index.html"><svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8 23c4-8 7-8 10-3s6 5 10-8" fill="none" stroke="#e0b15c" stroke-width="1.6" stroke-linecap="round"/><circle cx="25" cy="12" r="1.8" fill="#e0b15c"/></svg><span><strong>Passage</strong><small>Tours</small></span></a>
+        <p>Book tours online or ask the Accra desk to reshape a route.</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <a href="countries.html">Countries</a>
+        <a href="packages.html">Tour packages</a>
+        <a href="testimonials.html">Traveler stories</a>
+      </div>
+      <div>
+        <h2>Plan</h2>
+        <a href="booking.html">Book a tour</a>
+        <a href="booking.html?intent=quote">Request a quote</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.html">About</a>
+      </div>
+      <div>
+        <h2>Visit</h2>
+        <p>12 Independence Avenue<br>Accra, Ghana</p>
+        <a href="tel:+233301234567">+233 30 123 4567</a>
+        <a href="mailto:hello@passagetours.com">hello@passagetours.com</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="wrap footer-base">
+      <p>© 2026 Passage Tours. All rights reserved.</p>
+      <p>Holiday bookings · Adventure travel</p>
+    </div>
+  </footer>
+  <script src="js/site.js" defer></script>
+</body>
+</html>

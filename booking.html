@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a Tour | Passage Tours</title>
+  <meta name="description" content="Send a Passage Tours booking inquiry with your destination, travel dates, travelers, budget, and contact details.">
+  <meta name="theme-color" content="#0b2340">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,520;0,9..144,600;1,9..144,520&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="booking">
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="topbar">
+    <div class="wrap topbar-inner">
+      <span class="topbar-place">12 Independence Avenue, Accra, Ghana</span>
+      <span class="topbar-links">
+        <a href="tel:+233301234567">+233 30 123 4567</a>
+        <a href="https://wa.me/233301234567" target="_blank" rel="noopener">WhatsApp</a>
+      </span>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html" aria-label="Passage Tours home">
+        <svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8 23c4-8 7-8 10-3s6 5 10-8" fill="none" stroke="#a67c3d" stroke-width="1.6" stroke-linecap="round"/><circle cx="25" cy="12" r="1.8" fill="#a67c3d"/></svg>
+        <span><strong>Passage</strong><small>Tours</small></span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="countries.html" data-nav="countries">Countries</a>
+        <a href="packages.html" data-nav="packages">Packages</a>
+        <a href="about.html" data-nav="about">About</a>
+        <a href="testimonials.html" data-nav="stories">Stories</a>
+        <a href="faq.html" data-nav="faq">FAQ</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+        <a class="nav-book" href="booking.html" data-nav="booking">Book a tour</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-gold btn-small header-book" href="booking.html">Book a tour</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Menu</span><span class="bars"></span></button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero hero-booking">
+      <div class="wrap">
+        <p class="eyebrow">Booking inquiry</p>
+        <h1>Tell us how you want to travel</h1>
+        <p class="lede">Share the destination, dates, number of travelers, and a budget. We use it to confirm a package or draft a custom itinerary.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap" style="max-width:860px">
+        <form id="inquiry-form" class="panel form-card" novalidate>
+          <div class="form-grid">
+            <label class="field">
+              <span>I want to</span>
+              <select name="intent">
+                <option value="book">Book a package</option>
+                <option value="quote">Request a quote</option>
+                <option value="custom">Plan a custom itinerary</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Destination</span>
+              <select name="destination" data-destinations data-param="destination" data-placeholder="Choose a country" required></select>
+              <small class="error" data-error-for="destination"></small>
+            </label>
+            <label class="field wide">
+              <span>Package</span>
+              <select name="package"></select>
+            </label>
+            <label class="field">
+              <span>Departure</span>
+              <input type="date" name="departure">
+              <small class="error" data-error-for="departure"></small>
+            </label>
+            <label class="field">
+              <span>Return</span>
+              <input type="date" name="return">
+              <small class="error" data-error-for="return"></small>
+            </label>
+            <label class="field">
+              <span>Travelers</span>
+              <input type="number" name="travelers" min="1" max="20" value="2">
+            </label>
+            <label class="field">
+              <span>Budget per person</span>
+              <select name="budget">
+                <option value="">Not sure yet</option>
+                <option>Under $1,500</option>
+                <option>$1,500 – $2,500</option>
+                <option>$2,500 – $4,000</option>
+                <option>$4,000+</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Full name</span>
+              <input name="name" autocomplete="name" required>
+              <small class="error" data-error-for="name"></small>
+            </label>
+            <label class="field">
+              <span>Email</span>
+              <input name="email" type="email" autocomplete="email" required>
+              <small class="error" data-error-for="email"></small>
+            </label>
+            <label class="field">
+              <span>Phone</span>
+              <input name="phone" type="tel" autocomplete="tel" required>
+              <small class="error" data-error-for="phone"></small>
+            </label>
+            <label class="field">
+              <span>Preferred contact</span>
+              <select name="contact">
+                <option>WhatsApp</option>
+                <option>Phone</option>
+                <option>Email</option>
+              </select>
+            </label>
+            <label class="field wide">
+              <span>Notes</span>
+              <textarea name="notes" placeholder="Pace, rooms, celebrations, or places you want to skip."></textarea>
+            </label>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-gold" type="submit">Send inquiry</button>
+            <a href="https://wa.me/233301234567" target="_blank" rel="noopener">Or message us on WhatsApp</a>
+          </div>
+        </form>
+        <div class="success" id="form-success">
+          <p class="kicker">Inquiry saved</p>
+          <h2>Thank you, <span data-name>traveler</span>.</h2>
+          <p>Your reference is <strong data-ref>PT-0000</strong>. This preview keeps the inquiry in your browser. Call <a href="tel:+233301234567">+233 30 123 4567</a> or <a href="https://wa.me/233301234567" target="_blank" rel="noopener">WhatsApp</a> the Accra desk and quote that reference.</p>
+          <a class="btn btn-navy" href="packages.html">Browse more packages</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <a class="logo" href="index.html"><svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8 23c4-8 7-8 10-3s6 5 10-8" fill="none" stroke="#e0b15c" stroke-width="1.6" stroke-linecap="round"/><circle cx="25" cy="12" r="1.8" fill="#e0b15c"/></svg><span><strong>Passage</strong><small>Tours</small></span></a>
+        <p>Holiday bookings and custom itineraries from Accra.</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <a href="countries.html">Countries</a>
+        <a href="packages.html">Tour packages</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div>
+        <h2>Plan</h2>
+        <a href="booking.html">Book a tour</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h2>Visit</h2>
+        <p>12 Independence Avenue<br>Accra, Ghana</p>
+        <a href="tel:+233301234567">+233 30 123 4567</a>
+        <a href="mailto:hello@passagetours.com">hello@passagetours.com</a>
+      </div>
+    </div>
+    <div class="wrap footer-base">
+      <p>© 2026 Passage Tours. All rights reserved.</p>
+      <p>Book tours online</p>
+    </div>
+  </footer>
+  <script src="js/site.js" defer></script>
+</body>
+</html>
